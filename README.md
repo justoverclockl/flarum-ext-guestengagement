@@ -1,4 +1,4 @@
-![1](https://user-images.githubusercontent.com/79002016/115962996-24cdc880-a51e-11eb-9292-083bbea6bf8b.png)
+
 
 # Guestengagement
 
