@@ -16,17 +16,14 @@
     {
       "name": "Marco Colia",
       "email": "info@flarum.it",
-      "role": "Developer"
+      "role": "Developer",
+        "homepage": "https://flarum.it"
+
     }
   ],
   "autoload": {
     "psr-4": {
       "Justoverclock\\Guestengagement\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Justoverclock\\Guestengagement\\Tests\\": "tests/"
     }
   },
   "extra": {
