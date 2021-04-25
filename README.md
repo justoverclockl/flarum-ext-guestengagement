@@ -5,7 +5,11 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-guestengagement.svg)](https://packagist.org/packages/justoverclock/flarum-ext-guestengagement) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-guestengagement.svg)](https://packagist.org/packages/justoverclock/flarum-ext-guestengagement)
 
-A [Flarum](http://flarum.org) extension. Add a box that invite user to register under navbar
+A [Flarum](http://flarum.org) extension. Add a box that invite user to register under navbar.
+Settings available:
+
+ - Sets after how many posts the box will be displayed
+ - Set after how many seconds the box on the homepage is automatically hidden
 
 ### Installation
 
