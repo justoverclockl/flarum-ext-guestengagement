@@ -12,48 +12,39 @@ import app from 'flarum/app';
 import ExtensionPage from 'flarum/admin/components/ExtensionPage';
 
 app.initializers.add('justoverclock-guestengagement', () => {
-  app.extensionData.for('justoverclock-guestengagement').registerSetting(
-    {
-      setting: 'justoverclock-guestengagement.coordinates',
-      name: 'afterXpost',
-      type: 'number',
-      label: app.translator.trans('flarum-ext-guestengagement.admin.afterxpost'),
-      help: app.translator.trans('flarum-ext-guestengagement.admin.afterxpostdesc'),
-    },
-  );
-  app.extensionData.for('justoverclock-guestengagement').registerSetting(
-    {
-      setting: 'justoverclock-guestengagement.timeout',
-      name: 'timeout',
-      type: 'number',
-      label: app.translator.trans('flarum-ext-guestengagement.admin.autohide'),
-      help: app.translator.trans('flarum-ext-guestengagement.admin.autohidedesc'),
-    },
-  );
-  app.extensionData.for('justoverclock-guestengagement').registerSetting(
-    {
-      setting: 'justoverclock-guestengagement.textchange',
-      name: 'tchange',
-      type: 'text',
-      label: app.translator.trans('flarum-ext-guestengagement.admin.changetextbox'),
-      help: app.translator.trans('flarum-ext-guestengagement.admin.changetextboxdesc'),
-      placeholder: 'When you create an account...',
-    },
-  );
-  app.extensionData.for('justoverclock-guestengagement').registerSetting(
-    {
-      setting: 'justoverclock-guestengagement.BoxTitleChange',
-      name: 'BoxTitle',
-      type: 'text',
-      label: app.translator.trans('flarum-ext-guestengagement.admin.maintitle'),
-      help: app.translator.trans('flarum-ext-guestengagement.admin.maintitledesc'),
-      placeholder: 'Hello! You seem to be interested in this post!',
-    },
-  );
   app.extensionData.for('justoverclock-guestengagement').registerSetting({
-      setting: 'justoverclock-guestengagement.hide.homebox',
-      label: app.translator.trans('flarum-ext-guestengagement.admin.enablealbox'),
-      type: 'boolean',
-    },
-  );
-})
+    setting: 'justoverclock-guestengagement.coordinates',
+    name: 'afterXpost',
+    type: 'number',
+    label: app.translator.trans('flarum-ext-guestengagement.admin.afterxpost'),
+    help: app.translator.trans('flarum-ext-guestengagement.admin.afterxpostdesc'),
+  });
+  app.extensionData.for('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.timeout',
+    name: 'timeout',
+    type: 'number',
+    label: app.translator.trans('flarum-ext-guestengagement.admin.autohide'),
+    help: app.translator.trans('flarum-ext-guestengagement.admin.autohidedesc'),
+  });
+  app.extensionData.for('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.textchange',
+    name: 'tchange',
+    type: 'text',
+    label: app.translator.trans('flarum-ext-guestengagement.admin.changetextbox'),
+    help: app.translator.trans('flarum-ext-guestengagement.admin.changetextboxdesc'),
+    placeholder: 'When you create an account...',
+  });
+  app.extensionData.for('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.BoxTitleChange',
+    name: 'BoxTitle',
+    type: 'text',
+    label: app.translator.trans('flarum-ext-guestengagement.admin.maintitle'),
+    help: app.translator.trans('flarum-ext-guestengagement.admin.maintitledesc'),
+    placeholder: 'Hello! You seem to be interested in this post!',
+  });
+  app.extensionData.for('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.hide.homebox',
+    label: app.translator.trans('flarum-ext-guestengagement.admin.enablealbox'),
+    type: 'boolean',
+  });
+});
