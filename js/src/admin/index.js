@@ -33,7 +33,6 @@ app.extensionData.for('justoverclock-guestengagement').registerSetting(
   },
   14
 );
-
 app.extensionData.for('justoverclock-guestengagement').registerSetting(
   {
     setting: 'justoverclock-guestengagement.textchange',
@@ -45,7 +44,6 @@ app.extensionData.for('justoverclock-guestengagement').registerSetting(
   },
   14
 );
-
 app.extensionData.for('justoverclock-guestengagement').registerSetting(
   {
     setting: 'justoverclock-guestengagement.BoxTitleChange',
@@ -57,4 +55,8 @@ app.extensionData.for('justoverclock-guestengagement').registerSetting(
   },
   14
 );
-
+app.extensionData.for('justoverclock-guestengagement').registerSetting({
+  setting: 'justoverclock-guestengagement.hide.homebox',
+  label: 'Mostra Alert Box in Homepage',
+  type: 'boolean',
+});

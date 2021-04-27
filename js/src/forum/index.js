@@ -17,32 +17,33 @@ import Button from 'flarum/components/Button';
 app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
   extend(IndexPage.prototype, 'view', function (vdom) {
     if (!app.session.user)
-      if (vdom.children && vdom.children.splice) {
-      /*  Imposta un timeout per far scomparire automaticamente il div*/
-        setTimeout(function () {
-          $('#wrapperengage').fadeOut().empty();
-        }, app.forum.attribute('timeOut'));
-        const insert = m(
-          'div',
-          { id: 'wrapperengage' },
-          m('div', { id: 'engagebox' }, [
-            m('p', [
-              m('strong', app.translator.trans('flarum-ext-guestengagement.forum.hello')),
-              m('br'),
-              m('br'),
-              app.translator.trans('flarum-ext-guestengagement.forum.whenucreate'),
-              m('br'),
-              app.translator.trans('flarum-ext-guestengagement.forum.uwillreceive'),
-            ]),
-            m(
-              'button',
-              { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },
-              app.translator.trans('core.forum.header.sign_up_link')
-            )
-          ])
-        );
-        vdom.children.splice(1, 0, insert);
-      }
+      if (app.forum.attribute('hideHomeBox') === true)
+        if (vdom.children && vdom.children.splice) {
+          /*  Imposta un timeout per far scomparire automaticamente il div*/
+          setTimeout(function () {
+            $('#wrapperengage').fadeOut().empty();
+          }, app.forum.attribute('timeOut'));
+          const insert = m(
+            'div',
+            { id: 'wrapperengage' },
+            m('div', { id: 'engagebox' }, [
+              m('p', [
+                m('strong', app.translator.trans('flarum-ext-guestengagement.forum.hello')),
+                m('br'),
+                m('br'),
+                app.translator.trans('flarum-ext-guestengagement.forum.whenucreate'),
+                m('br'),
+                app.translator.trans('flarum-ext-guestengagement.forum.uwillreceive'),
+              ]),
+              m(
+                'button',
+                { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },
+                app.translator.trans('core.forum.header.sign_up_link')
+              ),
+            ])
+          );
+          vdom.children.splice(1, 0, insert);
+        }
   });
   extend(PostStream.prototype, 'view', function (vdom) {
     if (!app.session.user)
@@ -53,12 +54,7 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
           m(
             'div',
             { id: 'engageboxps' },
-            m('p', [
-              m('strong', app.forum.attribute('BoxTitle')),
-              m('br'),
-              m('br'),
-              app.forum.attribute('tchange'),
-            ]),
+            m('p', [m('strong', app.forum.attribute('BoxTitle')), m('br'), m('br'), app.forum.attribute('tchange')]),
             m(
               'button',
               { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },

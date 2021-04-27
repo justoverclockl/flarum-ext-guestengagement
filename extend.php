@@ -33,4 +33,6 @@ return [
         ->serializeToForum('tchange', 'justoverclock-guestengagement.textchange'),
     (new Extend\Settings)
         ->serializeToForum('BoxTitle', 'justoverclock-guestengagement.BoxTitleChange'),
+    (new Extend\Settings())->serializeToForum('hideHomeBox', 'justoverclock-guestengagement.hide.homebox', 'boolval', true),
+
 ];
