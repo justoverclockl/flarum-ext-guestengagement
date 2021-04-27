@@ -10,6 +10,7 @@ Settings available:
 
  - Sets after how many posts the box will be displayed
  - Set after how many seconds the box on the homepage is automatically hidden
+ - Enable/disable alert box on homepage
 
 ### Installation
 
