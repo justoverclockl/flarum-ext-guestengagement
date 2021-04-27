@@ -17,46 +17,43 @@ app.initializers.add('justoverclock-guestengagement', () => {
       setting: 'justoverclock-guestengagement.coordinates',
       name: 'afterXpost',
       type: 'number',
-      label: 'Display box After X post',
-      help: 'accept number, default is 0 (box will be displayed on top of post streams',
+      label: app.translator.trans('flarum-ext-guestengagement.admin.afterxpost'),
+      help: app.translator.trans('flarum-ext-guestengagement.admin.afterxpostdesc'),
     },
-    15
   );
-});
-app.extensionData.for('justoverclock-guestengagement').registerSetting(
-  {
-    setting: 'justoverclock-guestengagement.timeout',
-    name: 'timeout',
-    type: 'number',
-    label: 'Auto hide box after X seconds',
-    help: 'use millisecond, e.g for 5 sec use 5000',
-  },
-  14
-);
-app.extensionData.for('justoverclock-guestengagement').registerSetting(
-  {
-    setting: 'justoverclock-guestengagement.textchange',
-    name: 'tchange',
-    type: 'text',
-    label: 'Change text for the box',
-    help: 'Here u can set the text for the alert box located BETWEEN POSTS',
-    placeholder: 'When you create an account...',
-  },
-  14
-);
-app.extensionData.for('justoverclock-guestengagement').registerSetting(
-  {
-    setting: 'justoverclock-guestengagement.BoxTitleChange',
-    name: 'BoxTitle',
-    type: 'text',
-    label: 'Change title for the box',
-    help: 'Here u can set the Title for the alert box located BETWEEN POSTS',
-    placeholder: 'Hello! You seem to be interested in this post!',
-  },
-  14
-);
-app.extensionData.for('justoverclock-guestengagement').registerSetting({
-  setting: 'justoverclock-guestengagement.hide.homebox',
-  label: 'Mostra Alert Box in Homepage',
-  type: 'boolean',
-});
+  app.extensionData.for('justoverclock-guestengagement').registerSetting(
+    {
+      setting: 'justoverclock-guestengagement.timeout',
+      name: 'timeout',
+      type: 'number',
+      label: app.translator.trans('flarum-ext-guestengagement.admin.autohide'),
+      help: app.translator.trans('flarum-ext-guestengagement.admin.autohidedesc'),
+    },
+  );
+  app.extensionData.for('justoverclock-guestengagement').registerSetting(
+    {
+      setting: 'justoverclock-guestengagement.textchange',
+      name: 'tchange',
+      type: 'text',
+      label: app.translator.trans('flarum-ext-guestengagement.admin.changetextbox'),
+      help: app.translator.trans('flarum-ext-guestengagement.admin.changetextboxdesc'),
+      placeholder: 'When you create an account...',
+    },
+  );
+  app.extensionData.for('justoverclock-guestengagement').registerSetting(
+    {
+      setting: 'justoverclock-guestengagement.BoxTitleChange',
+      name: 'BoxTitle',
+      type: 'text',
+      label: app.translator.trans('flarum-ext-guestengagement.admin.maintitle'),
+      help: app.translator.trans('flarum-ext-guestengagement.admin.maintitledesc'),
+      placeholder: 'Hello! You seem to be interested in this post!',
+    },
+  );
+  app.extensionData.for('justoverclock-guestengagement').registerSetting({
+      setting: 'justoverclock-guestengagement.hide.homebox',
+      label: app.translator.trans('flarum-ext-guestengagement.admin.enablealbox'),
+      type: 'boolean',
+    },
+  );
+})

@@ -130,37 +130,37 @@ flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('justovercloc
     setting: 'justoverclock-guestengagement.coordinates',
     name: 'afterXpost',
     type: 'number',
-    label: 'Display box After X post',
-    help: 'accept number, default is 0 (box will be displayed on top of post streams'
-  }, 15);
-});
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
-  setting: 'justoverclock-guestengagement.timeout',
-  name: 'timeout',
-  type: 'number',
-  label: 'Auto hide box after X seconds',
-  help: 'use millisecond, e.g for 5 sec use 5000'
-}, 14);
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
-  setting: 'justoverclock-guestengagement.textchange',
-  name: 'tchange',
-  type: 'text',
-  label: 'Change text for the box',
-  help: 'Here u can set the text for the alert box located BETWEEN POSTS',
-  placeholder: 'When you create an account...'
-}, 14);
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
-  setting: 'justoverclock-guestengagement.BoxTitleChange',
-  name: 'BoxTitle',
-  type: 'text',
-  label: 'Change title for the box',
-  help: 'Here u can set the Title for the alert box located BETWEEN POSTS',
-  placeholder: 'Hello! You seem to be interested in this post!'
-}, 14);
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
-  setting: 'justoverclock-guestengagement.hide.homebox',
-  label: 'Mostra Alert Box in Homepage',
-  type: 'boolean'
+    label: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.afterxpost'),
+    help: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.afterxpostdesc')
+  });
+  flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.timeout',
+    name: 'timeout',
+    type: 'number',
+    label: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.autohide'),
+    help: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.autohidedesc')
+  });
+  flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.textchange',
+    name: 'tchange',
+    type: 'text',
+    label: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.changetextbox'),
+    help: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.changetextboxdesc'),
+    placeholder: 'When you create an account...'
+  });
+  flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.BoxTitleChange',
+    name: 'BoxTitle',
+    type: 'text',
+    label: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.maintitle'),
+    help: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.maintitledesc'),
+    placeholder: 'Hello! You seem to be interested in this post!'
+  });
+  flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.hide.homebox',
+    label: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans('flarum-ext-guestengagement.admin.enablealbox'),
+    type: 'boolean'
+  });
 });
 
 /***/ }),
