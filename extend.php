@@ -29,4 +29,8 @@ return [
         ->serializeToForum('xPost', 'justoverclock-guestengagement.coordinates'),
     (new Extend\Settings)
         ->serializeToForum('timeOut', 'justoverclock-guestengagement.timeout'),
+    (new Extend\Settings)
+        ->serializeToForum('tchange', 'justoverclock-guestengagement.textchange'),
+    (new Extend\Settings)
+        ->serializeToForum('BoxTitle', 'justoverclock-guestengagement.BoxTitleChange'),
 ];

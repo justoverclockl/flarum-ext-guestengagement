@@ -54,11 +54,10 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
             'div',
             { id: 'engageboxps' },
             m('p', [
-              m('strong', app.translator.trans('flarum-ext-guestengagement.forum.hellops')),
+              m('strong', app.forum.attribute('BoxTitle')),
               m('br'),
-              app.translator.trans('flarum-ext-guestengagement.forum.whenucreateps'),
               m('br'),
-              app.translator.trans('flarum-ext-guestengagement.forum.uwillreceiveps'),
+              app.forum.attribute('tchange'),
             ]),
             m(
               'button',
