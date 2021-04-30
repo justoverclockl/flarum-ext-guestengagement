@@ -47,4 +47,9 @@ app.initializers.add('justoverclock-guestengagement', () => {
     label: app.translator.trans('flarum-ext-guestengagement.admin.enablealbox'),
     type: 'boolean',
   });
+  app.extensionData.for('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.hide.postbox',
+    label: app.translator.trans('flarum-ext-guestengagement.admin.enablepostbox'),
+    type: 'boolean',
+  });
 });

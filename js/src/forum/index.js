@@ -47,22 +47,23 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
   });
   extend(PostStream.prototype, 'view', function (vdom) {
     if (!app.session.user)
-      if (vdom.children && vdom.children.splice) {
-        const insert = m(
-          'div',
-          { id: 'wrapperengageps' },
-          m(
+      if (app.forum.attribute('hidePostBox') === true)
+        if (vdom.children && vdom.children.splice) {
+          const insert = m(
             'div',
-            { id: 'engageboxps' },
-            m('p', [m('strong', app.forum.attribute('BoxTitle')), m('br'), m('br'), app.forum.attribute('tchange')]),
+            { id: 'wrapperengageps' },
             m(
-              'button',
-              { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },
-              app.translator.trans('core.forum.header.sign_up_link')
+              'div',
+              { id: 'engageboxps' },
+              m('p', [m('strong', app.forum.attribute('BoxTitle')), m('br'), m('br'), app.forum.attribute('tchange')]),
+              m(
+                'button',
+                { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },
+                app.translator.trans('core.forum.header.sign_up_link')
+              )
             )
-          )
-        );
-        vdom.children.splice(app.forum.attribute('xPost'), 0, insert);
-      }
+          );
+          vdom.children.splice(app.forum.attribute('xPost'), 0, insert);
+        }
   });
 });

@@ -34,5 +34,6 @@ return [
     (new Extend\Settings)
         ->serializeToForum('BoxTitle', 'justoverclock-guestengagement.BoxTitleChange'),
     (new Extend\Settings())->serializeToForum('hideHomeBox', 'justoverclock-guestengagement.hide.homebox', 'boolval', true),
+    (new Extend\Settings())->serializeToForum('hidePostBox', 'justoverclock-guestengagement.hide.postbox', 'boolval', true),
 
 ];
