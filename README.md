@@ -3,7 +3,7 @@
 
 # Flarum Guest Engagement
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-guestengagement.svg)](https://packagist.org/packages/justoverclock/flarum-ext-guestengagement) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-guestengagement.svg)](https://packagist.org/packages/justoverclock/flarum-ext-guestengagement)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://poser.pugx.org/justoverclock/flarum-ext-guestengagement/v)](//packagist.org/packages/justoverclock/flarum-ext-guestengagement) [![Total Downloads](https://poser.pugx.org/justoverclock/flarum-ext-guestengagement/downloads)](//packagist.org/packages/justoverclock/flarum-ext-guestengagement)
 
 A [Flarum](http://flarum.org) extension. Add a box that invite user to register under navbar and between X post.
 Settings available:
