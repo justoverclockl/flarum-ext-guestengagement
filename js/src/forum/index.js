@@ -12,7 +12,7 @@ import { extend } from 'flarum/common/extend';
 import IndexPage from 'flarum/forum/components/IndexPage';
 import PostStream from 'flarum/components/PostStream';
 import SignUpModal from 'flarum/components/SignUpModal';
-import Button from 'flarum/components/Button';
+import app from 'flarum/forum/app';
 
 app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
   extend(IndexPage.prototype, 'view', function (vdom) {
@@ -29,10 +29,8 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
             m('div', { id: 'engagebox' }, [
               m('p', [
                 m('strong', app.translator.trans('flarum-ext-guestengagement.forum.hello')),
-                m('br'),
-                m('br'),
+                m('p'),
                 app.translator.trans('flarum-ext-guestengagement.forum.whenucreate'),
-                m('br'),
                 app.translator.trans('flarum-ext-guestengagement.forum.uwillreceive'),
               ]),
               m(
