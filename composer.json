@@ -2,7 +2,8 @@
   "name": "justoverclock/flarum-ext-guestengagement",
   "description": "Add a box that invite user to register under navbar",
   "keywords": [
-    "flarum"
+    "guest engagement",
+      "signup invite"
   ],
   "type": "flarum-extension",
   "license": "MIT",
