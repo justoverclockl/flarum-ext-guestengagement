@@ -53,7 +53,12 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
             m(
               'div',
               { id: 'engageboxps' },
-              m('p', [m('strong', app.forum.attribute('justoverclock-guestengagement.BoxTitle')), m('br'), m('br'), app.forum.attribute('justoverclock-guestengagement.tchange')]),
+              m('p', [
+                m('strong', app.forum.attribute('justoverclock-guestengagement.BoxTitle')),
+                m('br'),
+                m('br'),
+                app.forum.attribute('justoverclock-guestengagement.tchange'),
+              ]),
               m(
                 'button',
                 { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },
