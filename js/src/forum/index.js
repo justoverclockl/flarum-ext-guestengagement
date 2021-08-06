@@ -17,12 +17,12 @@ import app from 'flarum/forum/app';
 app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
   extend(IndexPage.prototype, 'view', function (vdom) {
     if (!app.session.user)
-      if (app.forum.attribute('hideHomeBox') === true)
+      if (app.forum.attribute('justoverclock-guestengagement.hideHomeBox') === true)
         if (vdom.children && vdom.children.splice) {
           /*  Imposta un timeout per far scomparire automaticamente il div*/
           setTimeout(function () {
             $('#wrapperengage').fadeOut().empty();
-          }, app.forum.attribute('timeOut'));
+          }, app.forum.attribute('justoverclock-guestengagement.timeOut'));
           const insert = m(
             'div',
             { id: 'wrapperengage' },
@@ -45,7 +45,7 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
   });
   extend(PostStream.prototype, 'view', function (vdom) {
     if (!app.session.user)
-      if (app.forum.attribute('hidePostBox') === true)
+      if (app.forum.attribute('justoverclock-guestengagement.hidePostBox') === true)
         if (vdom.children && vdom.children.splice) {
           const insert = m(
             'div',
@@ -53,7 +53,7 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
             m(
               'div',
               { id: 'engageboxps' },
-              m('p', [m('strong', app.forum.attribute('BoxTitle')), m('br'), m('br'), app.forum.attribute('tchange')]),
+              m('p', [m('strong', app.forum.attribute('justoverclock-guestengagement.BoxTitle')), m('br'), m('br'), app.forum.attribute('justoverclock-guestengagement.tchange')]),
               m(
                 'button',
                 { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },
@@ -61,7 +61,7 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
               )
             )
           );
-          vdom.children.splice(app.forum.attribute('xPost'), 0, insert);
+          vdom.children.splice(app.forum.attribute('justoverclock-guestengagement.xPost'), 0, insert);
         }
   });
 });

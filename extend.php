@@ -18,22 +18,24 @@ use Flarum\Api\Event\Serializing;
 
 
 return [
-    (new Extend\Frontend('forum'))
-        ->js(__DIR__.'/js/dist/forum.js')
-        ->css(__DIR__.'/resources/less/forum.less'),
-    (new Extend\Frontend('admin'))
-        ->js(__DIR__.'/js/dist/admin.js')
-        ->css(__DIR__.'/resources/less/admin.less'),
-    new Extend\Locales(__DIR__.'/resources/locale'),
-    (new Extend\Settings)
-        ->serializeToForum('xPost', 'justoverclock-guestengagement.coordinates'),
-    (new Extend\Settings)
-        ->serializeToForum('timeOut', 'justoverclock-guestengagement.timeout'),
-    (new Extend\Settings)
-        ->serializeToForum('tchange', 'justoverclock-guestengagement.textchange'),
-    (new Extend\Settings)
-        ->serializeToForum('BoxTitle', 'justoverclock-guestengagement.BoxTitleChange'),
-    (new Extend\Settings())->serializeToForum('hideHomeBox', 'justoverclock-guestengagement.hide.homebox', 'boolval', true),
-    (new Extend\Settings())->serializeToForum('hidePostBox', 'justoverclock-guestengagement.hide.postbox', 'boolval', true),
+  (new Extend\Frontend('forum'))
+    ->js(__DIR__ . '/js/dist/forum.js')
+    ->css(__DIR__ . '/resources/less/forum.less'),
+  (new Extend\Frontend('admin'))
+    ->js(__DIR__ . '/js/dist/admin.js')
+    ->css(__DIR__ . '/resources/less/admin.less'),
+  new Extend\Locales(__DIR__ . '/resources/locale'),
+  (new Extend\Settings)
+    ->serializeToForum('justoverclock-guestengagement.xPost', 'justoverclock-guestengagement.coordinates'),
+  (new Extend\Settings)
+    ->serializeToForum('justoverclock-guestengagement.timeOut', 'justoverclock-guestengagement.timeout'),
+  (new Extend\Settings)
+    ->serializeToForum('justoverclock-guestengagement.tchange', 'justoverclock-guestengagement.textchange'),
+  (new Extend\Settings)
+    ->serializeToForum('justoverclock-guestengagement.BoxTitle', 'justoverclock-guestengagement.BoxTitleChange'),
+  (new Extend\Settings())
+    ->serializeToForum('justoverclock-guestengagement.hideHomeBox', 'justoverclock-guestengagement.hide.homebox', 'boolval', true),
+  (new Extend\Settings())
+    ->serializeToForum('justoverclock-guestengagement.hidePostBox', 'justoverclock-guestengagement.hide.postbox', 'boolval', true),
 
 ];
