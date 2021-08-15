@@ -69,7 +69,7 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
           </p>
           <p>{app.forum.attribute('justoverclock-guestengagement.tchange')}</p>
           <Button class="Button Button--primary" onclick={() => app.modal.show(SignUpModal)}>
-            {app.translator.trans('core.forum.header.sign_up_link')}
+            {app.translator.trans('flarum-ext-guestengagement.forum.signupbtn')}
           </Button>
         </div>
       </div>
