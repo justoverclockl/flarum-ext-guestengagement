@@ -82,8 +82,6 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
         itemList.push(engagementBox);
       }
 
-      console.log(itemList);
-
       return itemList;
     }, []);
 
