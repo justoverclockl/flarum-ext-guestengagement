@@ -19,6 +19,9 @@ import Button from 'flarum/common/components/Button';
 
 app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
   extend(IndexPage.prototype, 'view', function (vdom) {
+
+    const style = 'style="background: ' + app.forum.attribute('justoverclock-guestengagement.backgroundColor') + ';"'
+
     if (!app.session.user)
       if (app.forum.attribute('justoverclock-guestengagement.hideHomeBox') === true)
         if (vdom.children && vdom.children.splice) {
@@ -29,7 +32,10 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
           const insert = m(
             'div',
             { id: 'wrapperengage' },
-            m('div', { id: 'engagebox' }, [
+            m('div', {
+              id: 'engagebox',
+              style: style
+            }, [
               m('p', [
                 m('strong', app.translator.trans('flarum-ext-guestengagement.forum.hello')),
                 m('p'),
@@ -63,7 +69,7 @@ app.initializers.add('justoverclock/flarum-ext-guestengagement', () => {
 
     const engagementBox = (
       <div key="justoverclock-guestengagement" id="wrapperengageps">
-        <div id="engageboxps">
+        <div id="engageboxps" style>
           <p>
             <strong>{app.forum.attribute('justoverclock-guestengagement.BoxTitle')}</strong>
           </p>

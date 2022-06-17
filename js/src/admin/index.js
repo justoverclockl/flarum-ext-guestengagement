@@ -13,6 +13,13 @@ import ExtensionPage from 'flarum/admin/components/ExtensionPage';
 
 app.initializers.add('justoverclock-guestengagement', () => {
   app.extensionData.for('justoverclock-guestengagement').registerSetting({
+    setting: 'justoverclock-guestengagement.backgroundColor',
+    name: 'backgroundColor',
+    type: 'color',
+    label: app.translator.trans('flarum-ext-guestengagement.admin.backgroundColor'),
+    help: app.translator.trans('flarum-ext-guestengagement.admin.backgroundColordesc'),
+  });  
+  app.extensionData.for('justoverclock-guestengagement').registerSetting({
     setting: 'justoverclock-guestengagement.coordinates',
     name: 'afterXpost',
     type: 'number',
